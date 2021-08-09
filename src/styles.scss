@@ -1,0 +1,16 @@
+@import "./app/shared/styles/color.scss";
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+
+body {
+  background-color: $backgrond-color;
+  color: $font-color;
+  font-family: 'Prompt', sans-serif;
+}
+
+* {
+    font-family: 'Prompt', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}

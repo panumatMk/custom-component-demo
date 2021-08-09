@@ -1,0 +1,68 @@
+@import "../../styles/color.scss";
+@mixin button {
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: $primary-color;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        background-color: $secondary-color;
+    }
+}
+
+@mixin icon($content) {
+    content: $content;
+    position: absolute;
+    color: $tertiary-color;
+}
+
+.input-number-container {
+    display: flex;
+}
+
+.input-number {
+    height: 48px;
+    font-size: 18px;
+    border: none;
+    background-color: $tertiary-color;
+    text-align: right; 
+}
+
+.decrease {
+    @include button;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    &::before{
+        @include icon("-");
+        top: -21px;
+        left: 13px;
+        font-size: 60px;
+    }
+}
+
+.increase {
+    @include button;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    &::before{
+        @include icon("+");
+        font-size: 49px;
+        top: -12px;
+        left: 15px;
+    }
+}
+
+/*How TO - Hide Arrows From Input Number*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

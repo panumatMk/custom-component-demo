@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href /custom-component-demo --output-path docs",
+    "build": "ng build",
+    "build-2": "ng build --prod --base-href /custom-component-demo",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -29,6 +30,7 @@
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.8.0",
+    "jest": "^27.0.6",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
