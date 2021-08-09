@@ -1,11 +1,17 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "909596cb-d331-443e-9747-c769759039d2"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "custom-component-demo": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
         "@schematics/angular:application": {
           "strict": true
         }
